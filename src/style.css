@@ -9,16 +9,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  margin: 16px 32px;
-  font-family: 'Roboto', sans-serif;
-}
+  body {
+    margin: 16px 32px;
+    font-family: 'Roboto', sans-serif;
+  }
 
-header {
-  display: flex;
-  height: 48px;
-  width: 100%;
-}
+    header {
+      display: flex;
+      height: 48px;
+      width: 100%;
+    }
 
 header section {
   align-items: center;
@@ -72,3 +72,65 @@ header section:last-child div:last-child {
   margin-right: 0;
   width: 48px;
 }
+
+main {
+  align-items: center;
+  display: flex;
+  height: 48px;
+  margin: 32px 0;
+  width: 100%;
+}
+
+main h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  width: 33.3%;
+}
+
+main div:first-of-type {
+  width: 66.3%;
+}
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 448px;
+	height: 48px;
+	background: #333333;
+	display: block;
+	border-radius: 48px;
+	position: relative;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 224px;
+	height: 40px;
+	background: #ffffff;
+	border-radius: 40px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background: #333333;
+}
+
+input:checked + label:after {
+	left: calc(100% - 4px);
+	transform: translateX(-100%);
+}
+/* 
+label:active:after {
+
+	width: 130px;
+} */
